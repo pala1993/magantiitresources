@@ -72,8 +72,8 @@ h2 {
 
 @media (min-width: 1200px) {
     /* .container {
-		max-width: 1140px !important;
-	} */
+        max-width: 1140px !important;
+    } */
     .h-400 {
         height: 400px;
     }
@@ -112,12 +112,12 @@ h2 {
         padding-top: 0% !important;
     }
     /* .case_study p,
-		.case_study .btn {
-			font-size: 13px;
-		}
-		.case_study h2 {
-			font-size: 1.5rem;
-		} */
+        .case_study .btn {
+            font-size: 13px;
+        }
+        .case_study h2 {
+            font-size: 1.5rem;
+        } */
 }
 
 .btn {
@@ -143,6 +143,9 @@ h2 {
     .inner-case-study {
         width: 600px;
     }
+    .banking-services-box {
+        width: 760px;
+    }
     .bg-image {
         padding-top: 10%;
     }
@@ -150,17 +153,17 @@ h2 {
 
 @media (min-width: 1500px) {
     .bg-image {
-        padding-top: 5%;
+        padding-top: 4%;
     }
     /* .sub-menu {
-		padding-left: 243px;
-	} */
+        padding-left: 243px;
+    } */
 }
 
 @media (min-width: 1520px) {
     /* .sub-menu {
-		padding-left: 210px;
-	} */
+        padding-left: 210px;
+    } */
 }
 
 .case_study_images img {

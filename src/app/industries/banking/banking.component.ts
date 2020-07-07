@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BankingComponent implements OnInit {
 
+  isIEOrEdge: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+    this.isIEOrEdge = /msie\s|trident\/|edge\//i.test(window.navigator.userAgent);
+    
   }
+ 
 
 }

@@ -1,0 +1,41 @@
+.career-bg {
+    background-color: white;
+}
+
+.career-bg:nth-child(odd) {
+    background-color: #E4EDF3;
+}
+
+.career-bottom .career-icons {
+    width: 16%;
+}
+
+.career-bottom div:nth-child(2) {
+    width: 84%;
+}
+
+.modal.show {
+    display: block !important;
+}
+
+.modal.show .modal-dialog {
+    -webkit-transform: translate(0, 0) !important;
+    transform: translate(0, 0) !important;
+}
+
+.modal.fade .modal-dialog {
+    transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+    -webkit-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity .15s linear;
+}
+
+.fade.show {
+    opacity: 1 !important;
+}

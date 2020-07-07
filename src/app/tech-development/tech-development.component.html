@@ -2,7 +2,7 @@
     <div class="image-section ">
         <div class="container-fluid p-0 ">
             <div class="row m-0 ">
-                <picture>
+                <picture class="chrome">
                     <source type="image/webp " srcset="assets/images/services/development_services_480x320.jpg?w=480&amp;h=320&amp;q=75&amp;fm=webp 480w, 
 					assets/images/services/development_services_960x640.jpg?w=960&amp;h=640&amp;q=75&amp;fm=webp 960w, 
 					assets/images/services/development_services_1920x400.jpg?w=1920&amp;h=533&amp;q=75&amp;fm=webp 1920w,
@@ -20,9 +20,9 @@
 					assets/images/services/development_services_1920x400.jpg?w=1920&amp;h=533&amp;q=75&amp;fm=webp 1920w,
 
 					assets/images/services/development_services_2880x1033.jpg?w=2880&amp;h=1033&amp;q=75&amp;fm=webp 2880w, 
-					assets/images/services/development_services_3840x1560.jpg?w=3840&amp;h=1560&amp;q=75&amp;fm=webp 3840w " src="images/services/development_services_1960x400.jpg?w=1920&amp;q=75 " alt="Maganit IT Guild Carousel ">
+					assets/images/services/development_services_3840x1560.jpg?w=3840&amp;h=1560&amp;q=75&amp;fm=webp 3840w " src="images/services/development_services_1960x400.jpg?w=1920&amp;q=75 " title="Maganit IT Guild Carousel" alt="Maganit IT Guild Carousel ">
                 </picture>
-
+                <img src="assets/images/services/development_services_1920x400.jpg" class="img-fluid ie" alt="Maganit IT Guild Carousel" title="Maganit IT Guild Carousel">
                 <!-- <div class="overlap-text w-100 " >
                         <h2 class="text-center ">MIT JOURNEY</h2>
                     </div> -->
@@ -38,7 +38,8 @@
     <div class="row my-lg-5 my-4">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div>
-                <img src="assets/images/app-ser.webp" class="img-fluid w-100" alt="">
+                <img src="assets/images/app-ser.webp" class="img-fluid w-100 chrome" alt="Maganti IT Resources, LLC Application Development Services" title="Maganti IT Resources, LLC Application Development Services">
+                <img src="assets/images/app-ser.png" class="img-fluid w-100 ie" alt="Maganti IT Resources, LLC Application Development Services" title="Maganti IT Resources, LLC Application Development Services">
                 <div>
                     <div class="tech-app">
                         <h4 class="text-blue">Application Development Services</h4>
@@ -49,10 +50,7 @@
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div class="py-lg-4 px-lg-5 p-1">
-                <!-- <p class="mb-3 mt-lg-4 mt-1">
-                        You have your thought and we have expert minds who can change that idea into reality. Our team of developers are capable of delivering complicated projects which supports Windows, Linux and iOS. We are not selling you solutions; we
-                        are selling a dream of better business processing.
-                    </p> -->
+
                 <p class="mb-3 mt-4">At Maganti IT Solutions, we transform traditional portfolios to flexible, modular applications. Through these applications we provide enhanced business alignment, customer engagement and return on investment.</p>
                 <div class="mb-5 ml-5">
                     <ul>
@@ -64,8 +62,7 @@
                             App modernization</li>
                     </ul>
                 </div>
-                <!-- <p class="mb-lg-5 mb-3">At Maganti IT solutions, we transform traditional portfolios to flexible, modular applications. Through these applications we provide enhanced business alignment, customer engagement and return on investment.</p> -->
-                <a href="app-services.html" class="mit-red font-weight-bold">More..</a>
+                <a [routerLink]="'/app-development'" class="mit-red font-weight-bold">More..</a>
             </div>
 
         </div>
@@ -73,14 +70,7 @@
     </div>
     <div class="row my-lg-5 my-4">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <!-- <div class="p-lg-4 p-1">
-                    <p class="mb-3 mt-lg-4 mt-1">A mobile application helps business to directly communicate with its customers and find multiple growth opportunities. It acts as a marketing tool to increase client base, brand popularity and sales. We provide end-to-end mobile application
-                        development and services for user facing and corporate environments.
-                    </p>
-                    <p class="mb-lg-5 mb-3">Our team at Maganti It solutions understands your needs, requirements and capabilities and develop customized mobile applications. Apart from development we provide full cycle application services from ideology to publishing.
-                    </p>
-                    <a href="mobileApp-services.html" class="mit-red font-weight-bold">More..</a>
-                </div> -->
+
             <div class="py-lg-4 px-lg-5 p-1">
                 <p class="mb-3 mt-5">Our team at Maganti IT, understands your needs, requirements and capabilities and develops customized mobile applications.</p>
                 <div class="mb-5 ml-5">
@@ -91,14 +81,15 @@
                         <li>Cross platform app development</li>
                     </ul>
                 </div>
-                <a href="mobileApp-services.html" class="mit-red font-weight-bold">More..</a>
+                <a [routerLink]="'/mobileApp-services'" class="mit-red font-weight-bold">More..</a>
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div>
-                <img src="assets/images/mobile-app.webp" class="img-fluid w-100" alt="">
-                <div class="tech-soft">
-                    <h4 class="text-blue">Mobile Application Services</h4>
+                <img src="assets/images/mobile-app.webp" class="img-fluid w-100 chrome" alt="Maganti IT Resources, LLC Mobile Application Services" title="Maganti IT Resources, LLC Mobile Application Services">
+                <img src="assets/images/mobile-app.png" class="img-fluid w-100 ie" alt="Maganti IT Resources, LLC Mobile Application Services" title="Maganti IT Resources, LLC Mobile Application Services">
+                <div class="tech-mobile-soft">
+                    <h1 class="text-blue">Mobile Application Services</h1>
                 </div>
             </div>
 
@@ -108,7 +99,7 @@
     <div class="row my-lg-5 my-4">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div>
-                <img src="assets/images/db-services.png" class="img-fluid w-100" alt="">
+                <img src="assets/images/db-services.png" class="img-fluid w-100" alt="Database Services" title="Database Services">
                 <div class="tech-soft">
                     <h4 class="text-blue">Database</h4>
                 </div>
@@ -116,13 +107,7 @@
 
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <!-- <div class="p-lg-4 p-1">
-                    <p class="mb-3 mt-lg-4 mt-1">Oracle is a database whose main purpose is to store and retrieve information. This database is built for enterprises looking for higher performance computing with easy migration of their local applications to cloud. Oracle also helps
-                        business to automate their infrastructure which helps accelerate innovation.
-                    </p>
-                    <p class="mb-lg-5 mb-3">This is the most cost effective way to manage information and applications. It is a multi-model database management system commonly used for running online transaction processing, data warehousing and mixed database workloads.</p>
-                    <a href="oracle-services.html" class="mit-red font-weight-bold">More..</a>
-                </div> -->
+
             <div class="py-lg-4 px-lg-5 p-1">
                 <p class="mb-3 mt-3">Oracle has features such as sharing, private cloud, high-speed performance, high-speed data distribution, security permission managementand others that enable hybrid deployments. We revamp your business by integrating with oracle to do
                     the following functions.</p>
@@ -134,20 +119,14 @@
                         <li>Automated partitioning</li>
                     </ul>
                 </div>
-                <a href="oracle-services.html" class="mit-red font-weight-bold">More..</a>
+                <a [routerLink]="'/database-services'" class="mit-red font-weight-bold">More..</a>
             </div>
         </div>
     </div>
     <div class="row my-lg-5 my-4">
 
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <!-- <div class="p-lg-4 p-1">
-                    <p class="mb-3 mt-lg-4 mt-1">Day to day life of any business or an individual rely on computer-driven and interconnected information technologies. All are becoming more dependent on a secure cyberspace, new vulnerabilities have been revealed and new threats continue
-                        to emerge.
-                    </p>
-                    <p class="mb-lg-5 mb-3">Consequently, Cybersecurity should be a concern for any company, business or an individual to protect them from data breach threats and hackers. Evolving technologies like 5G, Quantum computing will fuel cyber security concerns.</p>
-                    <a href="security-services.html" class="mit-red font-weight-bold">More..</a>
-                </div> -->
+
             <div class="py-lg-4 px-lg-5 p-1">
                 <p class="mb-3 mt-3">Help protecting your digital assets from theft or damage.</p>
                 <div class="mb-5 ml-5">
@@ -161,12 +140,13 @@
                         <li>End point security</li>
                     </ul>
                 </div>
-                <a href="security-services.html" class="mit-red font-weight-bold">More..</a>
+                <a [routerLink]="'/security-services'" class="mit-red font-weight-bold">More..</a>
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div>
-                <img src="assets/images/sec-services.webp" class="img-fluid w-100" alt="">
+                <img src="assets/images/sec-services.webp" class="img-fluid w-100 chrome" alt="Maganti IT Resources, LLC Security Services" title="Maganti IT Resources, LLC Security Services">
+                <img src="assets/images/sec-services.png" class="img-fluid w-100 ie" alt="Maganti IT Resources, LLC Security Services" title="Maganti IT Resources, LLC Security Services">
                 <div>
                     <div class="tech-app">
                         <h4 class="text-blue">Security</h4>
@@ -179,7 +159,8 @@
     <div class="row my-lg-5 my-4">
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <div>
-                <img src="assets/images/web-brand.webp" class="img-fluid w-100" alt="">
+                <img src="assets/images/web-brand.webp" class="img-fluid w-100 chrome" alt="Maganti IT Resources, LLC Web Barnding" title="Maganti IT Resources, LLC Web Barnding">
+                <img src="assets/images/web-brand.png" class="img-fluid w-100 ie" alt="Maganti IT Resources, LLC Web Barnding" title="Maganti IT Resources, LLC Web Barnding">
                 <div>
                     <div class="tech-app">
                         <h4 class="text-blue">Web Branding</h4>
@@ -189,14 +170,7 @@
 
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <!-- <div class="p-lg-4 p-1">
-                    <p class="mb-3 mt-lg-4 mt-1">Confused on how to design your website to stand out in a crowd, we are ready to help with ideology, plan and design. Our expert team will analyze your business with your competitors and deliver you solutions, which is complete and
-                        will create branding for you.
-                    </p>
-                    <p class="mb-lg-5 mb-3">We will suggest you the suitable CMS platform based on your business requirements which is economical and eye catchy. We create digital experience designs with Symphony, angularJs, angular, React.js, Asp.net etc.
-                    </p>
-                    <a href="web-branding.html" class="mit-red font-weight-bold">More..</a>
-                </div> -->
+
             <div class="py-lg-4 px-lg-5 p-1">
                 <p class="mb-3 mt-5">Whether you want to create a brand or a website, increase traffic to your website, design a promotional campaign or increase brand visibility our team is ready to help you with following services.</p>
                 <div class="mb-5 ml-5">
@@ -208,20 +182,14 @@
 
                     </ul>
                 </div>
-                <a href="security-services.html" class="mit-red font-weight-bold">More..</a>
+                <a [routerLink]="'/web-branding'" class="mit-red font-weight-bold">More..</a>
             </div>
         </div>
 
     </div>
     <div class="row my-lg-5 my-4">
         <div class="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-6">
-            <!-- <div class="p-lg-4 p-1">
-                    <p class="mb-3 mt-lg-4 mt-1">Information technology is key business enabler to support business growth for any sized company or for a government agency. The operations and maintenance need to be done in real time to be up to date and make sure there are no issues.
-                        As, the environment changes dynamically with upgrades and expansions, we ensure you to focus on your key business requirements while we manage your day to day IT operations with our solutions.
-                    </p>
-                    <p class="mb-lg-5 mb-3">Operations include administration and management of essential elements to effectively, efficiently, and proactively utilize technology, information, and data.</p>
-                    <a href="software-op.html" class="mit-red font-weight-bold">More..</a>
-                </div> -->
+
             <div class="py-lg-4 px-lg-5 p-1">
                 <p class="mb-3 mt-4">Operations include administration and management of essential elements to effectively, efficiently, and proactively utilize technology, information, and data.</p>
                 <div class="mb-5 ml-5">
@@ -233,25 +201,28 @@
                         <li>Server repair management</li>
                     </ul>
                 </div>
-                <a href="security-services.html" class="mit-red font-weight-bold">More..</a>
+                <a [routerLink]="'/op-main'" class="mit-red font-weight-bold">More..</a>
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-5 col-lg-6 col-xl-6">
             <div>
-                <img src="assets/images/software-op.webp" class="img-fluid w-100" alt="">
+                <img src="assets/images/software-op.webp" class="img-fluid w-100 chrome" alt="Maganti IT Resources, LLC Operations and Maintenance" title="Maganti IT Resources, LLC Operations and Maintenance">
+                <img src="assets/images/software-op.png" class="img-fluid w-100 ie" alt="Maganti IT Resources, LLC Operations and Maintenance" title="Maganti IT Resources, LLC Operations and Maintenance">
                 <div class="tech-soft">
+
                     <h4 class="text-blue">Operations & Maintenance</h4>
+
                 </div>
+
             </div>
 
         </div>
 
+
+
+
+
     </div>
-
-
-
-
-
 </div>
 <section class="bg-blue mt-5">
     <div class="container-fluid">
@@ -269,7 +240,7 @@
             </div>
             <div class="row">
                 <div class="col text-center mt-4">
-                    <a href="contact.html" class="btn btn-outline-light px-5 py-2 mt-3 text-center">Get in touch</a>
+                    <a [routerLink]="'/contact'" class="btn btn-outline-light px-5 py-2 mt-3 text-center">Get in touch</a>
                 </div>
                 <!-- <button type="button" class="btn btn-primary px-5 py-2 mt-3">Contact Us</button> -->
 

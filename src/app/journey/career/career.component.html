@@ -20,7 +20,7 @@
 	  
 					 assets/images/career/career_1920x400.jpg?w=1920&amp;h=400&amp;q=75&amp;fm=webp 1920w,
 					 assets/images/career/career_2880x1033.jpg?w=2880&amp;h=1033&amp;q=75&amp;fm=webp 2880w, 
-					 assets/images/career/career_3840x1560.jpg?w=3840&amp;h=1560&amp;q=75&amp;fm=webp 3840w " src="assets/images/case_study/case_study_1920x400.jpg?w=1920&amp;q=75 " alt="Maganit IT Guild Carousel ">
+                     assets/images/career/career_3840x1560.jpg?w=3840&amp;h=1560&amp;q=75&amp;fm=webp 3840w " src="assets/images/career/career_1920x400.jpg?w=1920&amp;q=75 " alt="Maganit IT Guild Carousel ">
                 </picture>
 
 
@@ -32,18 +32,17 @@
 
 
 
-<div class="container-fluid career-bg">
+<div class="container-fluid career-bg" *ngFor="let job of JobPost">
     <div class="container py-3">
         <div class="row mt-2">
             <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
                 <div class="job-heading">
-                    <h5 class="mit-red font-weight-bold mb-4">DOT NET Developer</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Utenim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit</p>
+                    <h5 class="mit-red font-weight-bold mb-4">{{job.JobTitle}}</h5>
+                    <p>{{job.JobDescription}}</p>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 d-flex align-items-center">
-                <a href="javascript:void(0)" class="btn-hover mt-1 px-5 py-3 mx-auto d-block">
+                <a class="btn-hover mt-1 px-5 py-3 mx-auto d-block" (click)="getJobByID(job.ID)">
                     <em></em>
                     <span>
 						More Details
@@ -60,8 +59,8 @@
                         <i class="far fa-user text-blue font20"></i>
                     </div>
                     <div>
-                        <h6 class="font-weight-bold mit-red mb-2">Availability</h6>
-                        <p class="text-blue">5 People</p>
+                        <h6 class="font-weight-bold mit-red mb-2">OPEN DATE</h6>
+                        <p class="text-blue">{{job.JobOpenDate}}</p>
                     </div>
                 </div>
 
@@ -72,8 +71,8 @@
                         <i class="fas fa-align-left  text-blue font20"></i>
                     </div>
                     <div>
-                        <h6 class="font-weight-bold mit-red mb-2">EXPERIENCE</h6>
-                        <p class="text-blue">Min 5 years</p>
+                        <h6 class="font-weight-bold mit-red mb-2">END DATE</h6>
+                        <p class="text-blue">{{job.JobEndDate}}</p>
                     </div>
                 </div>
             </div>
@@ -84,15 +83,80 @@
                     </div>
                     <div>
                         <h6 class="font-weight-bold mit-red mb-2">EDUCATION</h6>
-                        <p class="text-blue">Graduation</p>
+                        <p class="text-blue">{{job.EducationalRequirement}}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+</div>
+<div class='modal fade' [ngClass]="jobpostmodal ? 'show':''" *ngIf="jobpostmodal">
+    <div class='modal-dialog modal-lg'>
+        <div class='modal-content'>
+            <div class='modal-header'>
+                <h1 class='modal-title' id='myModalLabel'>{{getJobData[0].JobTitle}}</h1>
+                <button type='button' class='close' (click)="closeModal()">
+<span aria-hidden='true'>&times;</span>
+</button>
+            </div>
+            <div class='modal-body'>
+                <div class='page-meta'>
+                    <div class='row'>
+                        <div class='col-xs-12 col-sm-3 py-0'>
+                            <h4><span class='c-orange'>Location:</span> &nbsp; {{getJobData[0].Location}}
+                            </h4>
+                        </div>
+                        <div class='col-xs-12 col-sm-3 py-0'>
+                            <h4><span class='c-orange'>Job Type:</span> &nbsp; Full Time
+                            </h4>
+                        </div>
+                        <div class='col-xs-12 col-sm-3 py-0'>
+                            <h4><span class='c-orange'>Open Date:</span> &nbsp; {{getJobData[0].JobOpenDate}}
+                            </h4>
+                        </div>
+                        <div class='col-xs-12 col-sm-3 py-0'>
+                            <h4><span class='c-orange'>End Date:</span> &nbsp; {{getJobData[0].JobEndDate}}
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class='job-desc col-xs-12 col-sm-12 py-0 mt-5 px-0'>
+                    <div class="mt-4rem">
+                        <h2 class='mb-3 c-orange'>Job Summary:</h2>
+                        <p *ngIf="getJobData[0].JobSummary; else elseBlock">{{getJobData[0].JobSummary}} </p>
+                        <ng-template #elseBlock class="mb-2">---</ng-template>
+                    </div>
+                    <div>
+                        <h2 class='mb-3 c-orange'>Job duties include (but not limited to):</h2>
+                        <p *ngIf="getJobData[0].JobDuties; else elseBlock">{{getJobData[0].JobDuties}}</p>
+                        <ng-template #elseBlock class="mb-2">---</ng-template>
+                    </div>
+                    <div class="mt-2">
+                        <h2 class="mb-3 c-orange">Skills required:</h2>
+                        <p *ngIf="getJobData[0].SkillsRequired; else elseBlock">{{getJobData[0].SkillsRequired}}</p>
+                        <ng-template #elseBlock class="mb-2">---</ng-template>
+                    </div>
+                    <div>
+                        <h2 class='mb-3 c-orange'>Education Required:</h2>
+                        <p *ngIf="getJobData[0].EducationalRequirement; else elseBlock">{{getJobData[0].EducationalRequirement}}</p>
+                        <ng-template #elseBlock class="mb-2">---</ng-template>
+                    </div>
+                    <div>
+                        <h2 class='mb-3 c-orange'>Send your resume to:</h2>
+                        <p>ATTN: HR, Maganti IT Resources, LLC, 5 Meadow Street, Suite 201, Naugatuck, CT 06770.</p>
+                    </div>
+                </div>
+            </div>
+            <div class='modal-footer'>
+                <button type='button' class='btn btn-default' (click)="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="container-fluid mt-3">
+
+<!-- <div class="container-fluid mt-3">
     <div class="container px-0">
         <div class="row mt-2">
             <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
@@ -267,7 +331,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <section class="pt-5 pb-5 bg-light career-sec">
     <div class="container-fluid ">

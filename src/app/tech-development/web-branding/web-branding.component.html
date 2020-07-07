@@ -2,7 +2,7 @@
     <div class="image-section ">
         <div class="container-fluid p-0 ">
             <div class="row m-0 ">
-                <picture>
+                <picture class="chrome">
                     <source type="image/webp " srcset="assets/images/services/web_branding_480x320.jpg?w=480&amp;h=320&amp;q=75&amp;fm=webp 480w, 
 					assets/images/services/web_branding_960x640.jpg?w=960&amp;h=640&amp;q=75&amp;fm=webp 960w, 
 					assets/images/services/web_branding_1920x400.jpg?w=1920&amp;h=533&amp;q=75&amp;fm=webp 1920w,
@@ -20,8 +20,9 @@
 					assets/images/services/web_branding_1920x400.jpg?w=1920&amp;h=533&amp;q=75&amp;fm=webp 1920w,
 				  
 					assets/images/services/web_branding_2880x1033.jpg?w=2880&amp;h=1033&amp;q=75&amp;fm=webp 2880w, 
-					assets/images/services/web_branding_3840x1560.jpg?w=3840&amp;h=1560&amp;q=75&amp;fm=webp 3840w " src="assets/images/services/web_branding_1960x400.jpg?w=1920&amp;q=75 " alt="Maganit IT Guild Carousel ">
+					assets/images/services/web_branding_3840x1560.jpg?w=3840&amp;h=1560&amp;q=75&amp;fm=webp 3840w " src="assets/images/services/web_branding_1960x400.jpg?w=1920&amp;q=75 " title="Maganit IT Guild Carousel" alt="Maganit IT Guild Carousel ">
                 </picture>
+                <img src="assets/images/services/web_branding_1920x400.jpg" class="img-fluid ie" alt="Maganit IT Guild Carousel" title="Maganit IT Guild Carousel">
 
                 <!-- <div class="overlap-text w-100 " >
 					<h2 class="text-center ">MIT JOURNEY</h2>
@@ -62,7 +63,7 @@
                 </ul>
             </div>
             <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                <img src="assets/images/web-design.png" class="img-fluid" alt="">
+                <img src="assets/images/web-design.png" class="img-fluid" alt="Web Design" title="Web Design">
             </div>
         </div>
     </div>
@@ -72,7 +73,7 @@
     <div class="container devSoftpadding">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                <img src="assets/images/seo.png" class="img-fluid" alt="">
+                <img src="assets/images/seo.png" class="img-fluid" alt="SEO" title="SEO">
             </div>
             <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -104,7 +105,7 @@
 
             </div>
             <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                <img src="assets/images/socail-media.png" class="img-fluid" alt="">
+                <img src="assets/images/socail-media.png" class="img-fluid" alt="socail-media" title="socail-media">
             </div>
         </div>
     </div>
@@ -114,7 +115,7 @@
     <div class="container devSoftpadding">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 text-center">
-                <img src="assets/images/content-marlet.png" class="img-fluid" alt="">
+                <img src="assets/images/content-marlet.png" class="img-fluid" alt="content-marlet" title="content-marlet">
             </div>
             <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1"></div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -153,7 +154,7 @@
             </div>
             <div class="row">
                 <div class="col text-center mt-4">
-                    <a href="contact.html" class="btn btn-outline-light px-5 py-2 mt-3 text-center">Get in touch</a>
+                    <a [routerLink]="'/contact'" class="btn btn-outline-light px-5 py-2 mt-3 text-center">Get in touch</a>
                 </div>
                 <!-- <button type="button" class="btn btn-primary px-5 py-2 mt-3">Contact Us</button> -->
 

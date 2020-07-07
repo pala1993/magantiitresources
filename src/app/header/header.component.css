@@ -70,50 +70,6 @@ float: right; */
     border-color: none !important;
 }
 
-.header .second-nav-social .social-links {
-    margin-top: 18px;
-    margin-right: -34px;
-}
-
-.header .second-nav-social .social-links a {
-    display: block;
-    float: left;
-    padding: 0 4px;
-    position: relative;
-}
-
-.header .second-nav-social .social-links a:after {
-    content: '';
-    position: absolute;
-    right: 2px;
-    top: 0px;
-    height: 25px;
-    width: 1px;
-    background-color: #fff;
-}
-
-.header .second-nav-social .social-links a:hover,
-.header .second-nav-social .social-links a:focus,
-.header .second-nav-social .social-links a.active,
-.header .second-nav-social .social-links a:active {
-    text-decoration: none;
-}
-
-.header .second-nav-social .social-links a:hover i,
-.header .second-nav-social .social-links a:focus i,
-.header .second-nav-social .social-links a.active i,
-.header .second-nav-social .social-links a:active i {
-    color: #777777;
-}
-
-.header .second-nav-social .social-links a:last-child:after {
-    display: none;
-}
-
-.header .second-nav-social .social-links i {
-    margin: 0 2px;
-}
-
 .header.active,
 .header.has-scrolled {
     background: #fff;
@@ -155,21 +111,12 @@ html {
     min-width: 320px;
 }
 
-ul,
-li {
-    /* font-family: 'Roboto', sans-serif; */
-}
-
 header li {
     list-style: none;
 }
 
 ul {
     line-height: 1.5em;
-}
-
-.sub-menu {
-    /* padding-left: 210px; */
 }
 
 a {
@@ -398,15 +345,17 @@ ul.main-menu li.active-trail a {
     border-bottom-color: #ae081e;
 }
 
-ul.main-menu li.active-trail .sub-menu {
+ul.main-menu li.active-trail .sub-menu-level-1 {
     display: block;
     /* border-bottom: 1px solid #ffffff; */
     overflow: hidden;
     z-index: 1;
+    box-shadow: 0px 5px 10px -5px #111;
 }
 
 ul.main-menu li.active-trail .sub-menu li {
     margin-left: 1px;
+    padding: 0;
 }
 
 ul.main-menu li.active-trail .sub-menu li a {
@@ -442,7 +391,7 @@ ul.sub-menu li a {
 header.active ul.main-menu li a,
 header.has-scrolled ul.main-menu li a {
     text-shadow: none;
-    color: #004767;
+    /* color: #004767; */
 }
 
 .header.has-scrolled {
@@ -543,7 +492,7 @@ header.has-scrolled .social-links i {
 }
 
 .mobile-nav-trigger-cont.menu-is-open {
-    top: 0px !important;
+    top: 10px !important;
     right: 0px !important;
 }
 
@@ -614,6 +563,10 @@ header.has-scrolled .social-links i {
     display: block;
     max-width: 200px;
     width: 100%;
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: -16px;
 }
 
 #mobile-nav ul.mobile-nav.is-visible {
@@ -795,7 +748,7 @@ border-bottom: none;
 @media screen and (max-width: 991px) {
     .mobile-nav-trigger-cont {
         display: block;
-        top: 20px;
+        top: 10px;
     }
     #mobile-nav {
         right: 0;
@@ -892,14 +845,15 @@ ul.main-menu li.expanded .sub-menu-level-2 a {
     padding: 8px 15px !important;
 }
 
-ul.main-menu li.expanded .sub-menu li:hover .sub-menu-level-2 {
+ul.main-menu li.expanded .sub-menu-level-1 li:hover .sub-menu-level-2 {
     display: block;
     left: 0;
-    top: 53px;
+    top: 130px;
     width: 280px;
-    position: absolute;
+    position: fixed;
     padding: 0;
     border: 0;
+    right: 18%;
 }
 
 ul.main-menu li.expanded .sub-menu li:hover .sub-menu-level-2 li a {
@@ -957,8 +911,24 @@ ul.main-menu li.expanded.menu-mlid-355 .sub-menu li.menu-mlid-1830:hover .sub-me
 }
 
 @media screen and (max-width: 767px) {
-    .logo-header img {
-        width: 200px !important;
+    .header .logo-header img.logo-width {
+        width: 210px !important;
+        margin: 0;
+        position: relative;
+        top: 0;
+        left: -16px;
+    }
+    .header.has-scrolled .logo-header img.logo-width {
+        width: 210px !important;
+        transition: all .3s;
+        margin: 0;
+        position: relative;
+        top: 0;
+        left: -16px;
+    }
+    .sub-menu-level-1 {
+        padding-left: 0% !important;
+        padding-right: 5% !important;
     }
 }
 
@@ -976,7 +946,7 @@ ul.main-menu li.expanded.menu-mlid-355 .sub-menu li.menu-mlid-1830:hover .sub-me
 .header .contact-sec .contact-mail-sec .contact ul li {
     list-style: none;
     float: left;
-    padding: 15px 5px;
+    padding: 14px 25px;
 }
 
 .header .contact-sec .contact-mail-sec .contact ul li a:hover {

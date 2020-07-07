@@ -4,19 +4,26 @@
             <div class="mainhomebanner">
                 <div class="main-top">
                     <div class="sub-banner">
-                        <img alt="Design and Development organistion in us" title="Maganti IT is a Design and Development organisation" class="img-fluid img-homepage" src="assets/images/001.png">
+                        <img alt="Design and Development organistion in us" title="Maganti IT is a Design and Development organisation" class="img-fluid img-homepage w-100" src="assets/images/001.png">
                         <div class="container">
                             <div class="magantiITsubhomepagetextb1 container">
-                                <div class="magantiIThomepage magantIThero magantiITheadline"><span class="newWays">Reimagine Success</span> in <br> <span class="newWays">New Ways</span> with
+                                <div class="magantiIThomepage magantIThero magantiITheadline">
+                                    <span class="newWays pos-4" [ngClass]="isIEOrEdge?'active':''">Reimagine Success</span>
+                                    <span class="in pos-3">in</span>
+                                    <br>
+                                    <span class="newWays pos-1" [ngClass]="isIEOrEdge?'active':''">New Ways</span>
+                                    <span class="with pos-2">with</span>
                                 </div>
-                                <div class="magantiIThomepage magantIThero magantiITheadline fontTT"> Technology Transformation</div>
-                                <div class="magantiIThomepage magantIThero magantiITbody" style="height: 118px;">At Maganti IT, we align and transform Technology Initiatives to optimize clients, <br>Business Operations with strategic goals and value realization.</div>
+                                <div class="magantiIThomepage magantIThero magantiITheadline fontTT pos-5">
+                                    Technology Transformation
+                                </div>
+                                <div class="magantiIThomepage magantIThero magantiITbody pos-6" style="height: 118px;">At Maganti IT, we align and transform Technology Initiatives to optimize clients, <br>Business Operations with strategic goals and value realization.</div>
                             </div>
                         </div>
 
                         <div class="arrowDown">
                             <a class="down" href="javascript:void(0)">
-                                <img src="assets/images/scrollDown.png" alt="arrow of the downscroll on the Maganti IT" srcset="assets/images/scrollDown.png">
+                                <img src="assets/images/scrollDown.png" alt="arrow of the downscroll on the Maganti IT" srcset="assets/images/scrollDown.png" title="Downscroll on the Maganti IT">
                             </a>
                         </div>
                     </div>
@@ -28,11 +35,12 @@
 </section>
 
 <div class="container p-lg-5 p-sm-3 mt-5">
-    <h4 class="text-center heading_h4 mb-5">LATEST INSIGHTS</h4>
+    <h1 class="text-center heading_h4 mb-5">LATEST INSIGHTS</h1>
     <div class="row">
         <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="insights">
-                <div><img src="assets/images/latestInsights/corona.webp" class="img-fluid w-100 insights_img" alt=""></div>
+                <div><img src="assets/images/latestInsights/corona.webp" class="img-fluid w-100 insights_img chrome" alt="insights_img chrome" title="insights_img chrome">
+                    <img src="assets/images/latestInsights/corona.png" class="img-fluid w-100 insights_img ie" alt="insights_img chrome" title="insights_img chrome"></div>
                 <div class="insights_text">
                     <p class="mb-2 text-dark">May 09, 2020</p>
                     <h6 class="text-left mb-2 font-weight-bold mit-red">Future of technology with COVID-19</h6>
@@ -43,7 +51,7 @@
         </div>
         <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="insights">
-                <div><img src="assets/images/latestInsights/usRecession.jfif" class="img-fluid w-100 insights_img" alt=""></div>
+                <div><img src="assets/images/latestInsights/usRecession.jfif" class="img-fluid w-100 insights_img" alt="insights_img" title="insights_img"></div>
                 <div class="insights_text">
                     <p class="mb-2 text-dark">June 09, 2020</p>
                     <h6 class="text-left mb-2 font-weight-bold mit-red">U.S. officially enters into recession</h6>
@@ -54,7 +62,8 @@
         </div>
         <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="insights">
-                <div><img src="assets/images/latestInsights/virtual.png" class="img-fluid w-100 insights_img" alt=""></div>
+                <div><img src="assets/images/latestInsights/virtual.png" class="img-fluid w-100 insights_img ie" alt="insights_img" title="insights_img"><img src="assets/images/latestInsights/virtual.webp" class="img-fluid w-100 insights_img chrome" alt="insights_img"
+                        title="insights_img"></div>
                 <div class="insights_text">
                     <p class="mb-2 text-dark"> June 10, 2020</p>
                     <h6 class="text-left mb-2 font-weight-bold mit-red">Virtual and Augmented Reality will change the way Retail Industry</h6>
@@ -68,7 +77,8 @@
 <div class="container my-5 our-works">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
-            <img src="assets/images/works.webp" class="img-fluid w-100" alt="">
+            <img src="assets/images/works.webp" class="img-fluid w-100 chrome" alt="insights_img" title="insights_img">
+            <img src="assets/images/works.png" class="img-fluid w-100 ie" alt="insights_img" title="insights_img">
         </div>
         <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
             <div class="home_works">
@@ -105,7 +115,8 @@
     </div>
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <img src="assets/images/plan.webp" class="img-fluid w-100" alt="">
+            <img src="assets/images/plan.webp" class="img-fluid w-100 chrome" alt="insights_img" title="plan">
+            <img src="assets/images/plan.png" class="img-fluid w-100 ie" alt="insights_img" title="plan">
         </div>
     </div>
 
@@ -149,12 +160,13 @@
                 <div class="w-100 text-center">
                     <h5 class="text-white font-weight-bold mb-4 font-60">Discuss your Project</h5>
                 </div>
+
+            </div>
+            <div class="row w-100 mt-3">
                 <div class="w-100 text-center">
                     <p class="mb-0 text-white" style="font-size:18px;">We are a team of 100+ professionals, who deliver only top quality web solutions.</p>
 
                 </div>
-
-
             </div>
             <div class="row">
                 <div class="col text-center mt-4">

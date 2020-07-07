@@ -2,7 +2,7 @@
     <div class="image-section ">
         <div class="container-fluid p-0 ">
             <div class="row m-0 ">
-                <picture>
+                <picture class="chrome">
                     <source type="image/webp " srcset="assets/images/journy/mit_journey_480x320.webp?w=480&amp;h=320&amp;q=75&amp;fm=webp 480w, 
 					assets/images/journy/mit_journey_960x640.webp?w=960&amp;h=640&amp;q=75&amp;fm=webp 960w, 
 					assets/images/journy/mit_journey_1920x400.webp?w=1920&amp;h=533&amp;q=75&amp;fm=webp 1920w,
@@ -20,10 +20,10 @@
 					assets/images/journy/mit_journey_1920x400.webp?w=1920&amp;h=533&amp;q=75&amp;fm=webp 1920w,
 		  
 					assets/images/journy/mit_journey_2880x1033.webp?w=2880&amp;h=1033&amp;q=75&amp;fm=webp 2880w, 
-					assets/images/journy/mit_journey_3840x1560.webp?w=3840&amp;h=1560&amp;q=75&amp;fm=webp 3840w " src="assets/images/journy/mit_journey_1960x400.webp?w=1920&amp;q=75 " alt="Maganit IT Guild Carousel ">
+					assets/images/journy/mit_journey_3840x1560.webp?w=3840&amp;h=1560&amp;q=75&amp;fm=webp 3840w " src="assets/images/journy/mit_journey_1960x400.webp?w=1920&amp;q=75 " title="Maganit IT Guild Carousel" alt="Maganit IT Guild Carousel ">
                 </picture>
 
-
+                <img src="assets/images/journy/mit_journey_1920x400.png" class="img-fluid ie" alt="Maganit IT Guild Carousel" title="Maganit IT Guild Carousel">
 
             </div>
             <div class="row m-0 ">
@@ -270,7 +270,7 @@
             </div>
             <div class="row">
                 <div class="col text-center mt-4">
-                    <a href="contact.html" class="btn btn-outline-light px-5 py-2 mt-3 text-center">Get in touch</a>
+                    <a [routerLink]="'/contact'" class="btn btn-outline-light px-5 py-2 mt-3 text-center">Get in touch</a>
                 </div>
 
             </div>

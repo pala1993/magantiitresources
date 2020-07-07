@@ -27,7 +27,17 @@
                             "./node_modules/bootstrap/dist/css/bootstrap.css",
                             "src/styles.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "src/assets/js/jquery.min.js",
+                            "src/assets/js/popper.min.js",
+                            "src/assets/js/bootstrap.min.js",
+                            "src/assets/js/allJs.js",
+                            "src/assets/js/jquery.cycle2.min.js",
+                            "src/assets/js/jquery.cycle2.swipe.min.js",
+                            "src/assets/js/location.slider.js",
+                            "src/assets/js/jquery.browser.min.js",
+                            "src/assets/js/ie.js"
+                        ]
                     },
                     "configurations": {
                         "production": {
@@ -54,6 +64,9 @@
                                     "maximumError": "10kb"
                                 }
                             ]
+                        },
+                        "es5": {
+                            "tsConfig": "./tsconfig-es5.app.json"
                         }
                     }
                 },
@@ -65,6 +78,9 @@
                     "configurations": {
                         "production": {
                             "browserTarget": "mitreasources:build:production"
+                        },
+                        "es5": {
+                            "browserTarget": "mitreasources:build:es5"
                         }
                     }
                 },

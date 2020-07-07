@@ -30,6 +30,8 @@ import { EmployeeReviewsComponent } from './employee-reviews/employee-reviews.co
 import { CovidComponent } from './insights/covid/covid.component';
 import { UsofficialComponent } from './insights/usofficial/usofficial.component';
 import { VirtualComponent } from './insights/virtual/virtual.component';
+import { FutekComponent } from './journey/casestudy/futek/futek.component';
+import { CurorcComponent } from './journey/casestudy/curorc/curorc.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -61,11 +63,17 @@ const routes: Routes = [
   { path: 'covid-19', component: CovidComponent },
   { path: 'usofficial', component: UsofficialComponent },
   { path: 'virtual', component: VirtualComponent },
+  { path: 'futek', component: FutekComponent },
+  { path: 'curorc', component: CurorcComponent }
+
  ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{onSameUrlNavigation: 'reload'})],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+
+ }
 

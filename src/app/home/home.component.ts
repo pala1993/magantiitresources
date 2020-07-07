@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  isIEOrEdge: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+    this.isIEOrEdge = /msie\s|trident\/|edge\//i.test(window.navigator.userAgent);
+    
   }
 
 }

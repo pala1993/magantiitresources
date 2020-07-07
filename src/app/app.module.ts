@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +35,8 @@ import { ClientsReviewsComponent } from './clients-reviews/clients-reviews.compo
 import { CovidComponent } from './insights/covid/covid.component';
 import { UsofficialComponent } from './insights/usofficial/usofficial.component';
 import { VirtualComponent } from './insights/virtual/virtual.component';
+import { FutekComponent } from './journey/casestudy/futek/futek.component';
+import { CurorcComponent } from './journey/casestudy/curorc/curorc.component';
 
 @NgModule({
   declarations: [
@@ -68,11 +71,15 @@ import { VirtualComponent } from './insights/virtual/virtual.component';
     ClientsReviewsComponent,
     CovidComponent,
     UsofficialComponent,
-    VirtualComponent
+    VirtualComponent,
+    FutekComponent,
+    CurorcComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

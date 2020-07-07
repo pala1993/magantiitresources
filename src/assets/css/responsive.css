@@ -113,7 +113,7 @@
     .ourGoal {
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        /* background-attachment: fixed; */
     }
     .retail-side {
         padding: 25px !important;
@@ -193,7 +193,46 @@
     }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1025px) and (max-width:1599px) {
+    .mainhomebanner,
+    .main-top,
+    .img-homepage {
+        height: 575px !important;
+    }
+    .magantiIThomepage.magantIThero.magantiITheadline,
+    .magantIThero h1 {
+        font-size: 50px !important;
+    }
+    .magantiITsubhomepagetextb1 {
+        left: 50% !important;
+    }
+}
+
+@media screen and (min-width:1600px) and (max-width:1980px) {
+    .contact-mail-sec .contact ul li a {
+        font-size: 16px;
+    }
+    .database-service-boxsec {
+        top: 70% !important;
+    }
+    .magantiITdbservicespage.magantITdb.magantiITdbheadline {
+        font-size: 30px;
+    }
+    .mainhomebanner,
+    .main-top,
+    .img-homepage {
+        height: 670px !important;
+    }
+    .magantiIThomepage.magantIThero.magantiITheadline,
+    .magantIThero h1 {
+        font-size: 55px !important;
+    }
+    .magantiITsubhomepagetextb1 {
+        left: 55% !important;
+    }
+}
+
+@media screen and (min-width:1025px) {
     .contact-mail-sec .contact ul li a {
         font-size: 15px;
     }
@@ -207,20 +246,13 @@
     picture {
         margin-top: -10px;
     }
-    .magantiITdbservicespage.magantITdb.magantiITdbheadline {
+    .magantiITdbservicespage.magantITdb.magantiITdbheadline,
+    .magantIThero h1 {
         font-size: 30px;
     }
-    .mainhomebanner,
-    .main-top,
-    .img-homepage {
-        height: 575px !important;
-    }
-    .magantiITsubhomepagetextb1 {
+    /* .magantiITsubhomepagetextb1 {
         left: 50% !important;
-    }
-    .magantiIThomepage.magantIThero.magantiITheadline {
-        font-size: 50px !important;
-    }
+    } */
 }
 
 @media screen and (min-width:768px) and (max-width:1024px) {
@@ -233,7 +265,8 @@
     .database-service-boxsec {
         top: 84%;
     }
-    .magantiITdbservicespage.magantITdb.magantiITdbheadline {
+    .magantiITdbservicespage.magantITdb.magantiITdbheadline,
+    .magantIThero h1 {
         font-size: 20px;
     }
     .cloud-computing-service-box {
@@ -258,7 +291,8 @@
     .database-service-boxsec {
         left: 48% !important;
     }
-    .magantiIThomepage.magantIThero.magantiITheadline {
+    .magantiIThomepage.magantIThero.magantiITheadline,
+    .magantiIThomepage.magantIThero.magantiITheadline h1 {
         font-size: 26px !important;
     }
     .magantiIThomepage.magantIThero.magantiITbody {
@@ -274,6 +308,12 @@
     .main-top,
     .img-homepage {
         height: auto !important;
+    }
+    .tiles .tile img {
+        width: 70% !important;
+    }
+    .team-info {
+        width: 100% !important;
     }
 }
 
@@ -303,28 +343,5 @@
     }
     picture {
         margin-top: -15px;
-    }
-}
-
-@media screen and (min-width:1500px) {
-    .contact-mail-sec .contact ul li a {
-        font-size: 16px;
-    }
-    .database-service-boxsec {
-        top: 70% !important;
-    }
-    .magantiITdbservicespage.magantITdb.magantiITdbheadline {
-        font-size: 30px;
-    }
-    .mainhomebanner,
-    .main-top,
-    .img-homepage {
-        height: 670px !important;
-    }
-    .magantiIThomepage.magantIThero.magantiITheadline {
-        font-size: 55px !important;
-    }
-    .magantiITsubhomepagetextb1 {
-        left: 55% !important;
     }
 }

@@ -5,16 +5,13 @@ $(".menu-link, .overlay").click(function() {
 });
 
 $(".mobile-nav-trigger").click(function() {
+    alert("sdfsd");
     $(".mobile-nav").toggleClass("is-visible");
     $("body").toggleClass("scrolling-locked");
     $(".mobile-nav-trigger-cont").toggleClass("menu-is-open");
 });
 
 // Open parent menu in mobile nav
-
-
-
-
 
 // Open parent menu in mobile nav
 $("li.active").parent('ul.mobile-nav')
@@ -137,23 +134,86 @@ $(function() {
         }, 700);
     });
 
+    $("input[name='phone']").on("keyup", function() {
+        $("input[name='number']").val(destroyMask(this.value));
+        this.value = createMask($("input[name='number']").val());
+    })
+
+    function createMask(string) {
+        console.log(string)
+        return string.replace(/(\d{3})(\d{3})(\d{3})/, "$1-$2-$3");
+    }
+
+    function destroyMask(string) {
+        console.log(string)
+        return string.replace(/\D/g, '').substring(0, 10);
+    }
 
     $("#bootstrapForm").submit(function(event) {
 
         // make selected form variable
         var vForm = $(this);
+        var type = $(this).data('type');
+        var status = $(this).data('status');
+
 
         /*
-        If not valid prevent form submit
-        https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity
-        */
+            If not valid prevent form submit
+            https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity
+            */
         if (vForm[0].checkValidity() === false) {
             event.preventDefault()
             event.stopPropagation()
         } else {
 
+
+            event.preventDefault()
+
+
+            var name = $("#input1").val();
+            var phone = $("#input3").val();
+            var email = $("#input2").val();
+            var subject = $("#input4").val();
+            var message = $("#text").val();
+            var action = 'fatch-single';
+            $.ajax({
+                url: "send_mail.php",
+                data: {
+                    username: name,
+                    phone: phone,
+                    email: email,
+                    subject: subject,
+                    message: message,
+                    action: action
+                },
+                success: function(res) {
+                    $("#input1").val('');
+                    $("#input3").val('');
+                    $("#input2").val('');
+                    $("#input4").val('');
+                    $("#text").val('');
+                    document.getElementById("message-success").innerHTML = res;
+                    $('.notify')
+                        .removeClass()
+                        .attr('data-notification-status', status)
+                        .addClass(type + ' notify')
+                        .addClass('do-show');
+                    setTimeout(function() { $(".notify").removeClass('bottom-right'); }, 6000);
+
+                    event.preventDefault();
+                    // event.stopPropagation()
+                    vForm.removeClass('was-validated');
+
+                },
+                error: function() {
+                    alert("fail")
+                }
+            });
+
+
+
             // Replace alert with ajax submit here...
-            alert("your form is valid and ready to send");
+            // alert("your form is valid and ready to send");
 
         }
 
@@ -162,6 +222,7 @@ $(function() {
 
 
     });
+
 
     $(".map-type-switch").on('click', function() {
         window.open(this.href);
@@ -172,5 +233,4 @@ $(function() {
             scrollTop: $(".our-works").offset().top
         }, 1500);
     });
-
 });
